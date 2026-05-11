@@ -1,37 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Deep Dark Background -->
-    <color name="background_primary">#030508</color>
-    <color name="background_secondary">#0A0F14</color>
-    <color name="background_card">#0E1419</color>
-    <color name="background_surface">#141C22</color>
+    <!-- Cyberpunk Dark Noir Colors -->
+    <color name="black_primary">#FF0D0D0D</color>
+    <color name="black_secondary">#FF1A1A1A</color>
+    <color name="black_surface">#FF242424</color>
+    <color name="black_card">#FF2D2D2D</color>
+    
+    <!-- Neon Accent Colors -->
+    <color name="neon_cyan">#FF00FFFF</color>
+    <color name="neon_cyan_light">#FF66FFFF</color>
+    <color name="neon_cyan_dark">#FF00CCCC</color>
+    
+    <color name="neon_purple">#FF9D00FF</color>
+    <color name="neon_purple_light">#FFBF40FF</color>
+    <color name="neon_purple_dark">#FF7A00CC</color>
+    
+    <color name="neon_blue">#FF0066FF</color>
+    <color name="neon_blue_light">#FF4D94FF</color>
+    <color name="neon_blue_dark">#FF004DCC</color>
+    
+    <color name="neon_pink">#FFFF00AA</color>
+    <color name="neon_green">#FF00FF66</color>
+    <color name="neon_orange">#FFFF6600</color>
+    <color name="neon_red">#FFFF0044</color>
+    
+    <!-- Glow Effects -->
+    <color name="glow_cyan">#4000FFFF</color>
+    <color name="glow_purple">#409D00FF</color>
+    <color name="glow_blue">#400066FF</color>
     
     <!-- Text Colors -->
-    <color name="text_primary">#FFFFFF</color>
+    <color name="text_primary">#FFFFFFFF</color>
     <color name="text_secondary">#B3FFFFFF</color>
-    <color name="text_tertiary">#66FFFFFF</color>
-    <color name="text_quaternary">#40FFFFFF</color>
-    
-    <!-- Cyan Brand Colors -->
-    <color name="accent_primary">#00E5FF</color>
-    <color name="accent_secondary">#0099FF</color>
-    <color name="accent_glow">#6600E5FF</color>
-    <color name="accent_dim">#1A00E5FF</color>
+    <color name="text_tertiary">#80FFFFFF</color>
+    <color name="text_disabled">#4DFFFFFF</color>
     
     <!-- Status Colors -->
-    <color name="status_danger">#FF2D55</color>
-    <color name="status_success">#30D158</color>
-    <color name="status_warning">#FFD60A</color>
-    <color name="status_gold">#FFD700</color>
-    <color name="status_silver">#C0C0C0</color>
-    <color name="status_bronze">#CD7F32</color>
+    <color name="status_active">#FF00FF66</color>
+    <color name="status_inactive">#FF666666</color>
+    <color name="status_warning">#FFFFAA00</color>
+    <color name="status_error">#FFFF0044</color>
     
-    <!-- Borders -->
-    <color name="border_dim">#2600E5FF</color>
-    <color name="border_medium">#4000E5FF</color>
+    <!-- Backgrounds -->
+    <color name="background_primary">#FF0D0D0D</color>
+    <color name="background_secondary">#FF1A1A1A</color>
+    <color name="background_tertiary">#FF242424</color>
     
-    <!-- Standard -->
-    <color name="black">#000000</color>
-    <color name="white">#FFFFFF</color>
-    <color name="transparent">#00000000</color>
+    <!-- Radar Colors -->
+    <color name="radar_grid">#1A00FFFF</color>
+    <color name="radar_sweep">#4000FFFF</color>
+    <color name="radar_target">#FF00FF66</color>
+    
+    <!-- Map Colors -->
+    <color name="map_background">#FF0D0D0D</color>
+    <color name="map_pin">#FF00FFFF</color>
+    <color name="map_trail">#400066FF</color>
+    
+    <!-- Card Colors -->
+    <color name="card_background">#1A2D2D2D</color>
+    <color name="card_border">#3300FFFF</color>
+    
+    <!-- Detection Badge Colors -->
+    <color name="badge_high">#FF00FF66</color>
+    <color name="badge_medium">#FFFFAA00</color>
+    <color name="badge_low">#FFFF6600</color>
+    <color name="badge_minimal">#FFFF0044</color>
 </resources>
