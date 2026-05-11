@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent_dim">#1A00E5FF</color>
+    <color name="accent_glow">#6600E5FF</color>
+    <color name="accent_primary">#00E5FF</color>
+    <color name="accent_secondary">#0099FF</color>
+    <color name="background_card">#0E1419</color>
+    <color name="background_primary">#030508</color>
+    <color name="background_secondary">#0A0F14</color>
+    <color name="background_surface">#141C22</color>
+    <color name="black">#000000</color>
+    <color name="border_dim">#2600E5FF</color>
+    <color name="border_medium">#4000E5FF</color>
+    <color name="status_bronze">#CD7F32</color>
+    <color name="status_danger">#FF2D55</color>
+    <color name="status_gold">#FFD700</color>
+    <color name="status_silver">#C0C0C0</color>
+    <color name="status_success">#30D158</color>
+    <color name="status_warning">#FFD60A</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_quaternary">#40FFFFFF</color>
+    <color name="text_secondary">#B3FFFFFF</color>
+    <color name="text_tertiary">#66FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <string name="alert_message">%1$s\n%2$s\nSignal: %3$d dBm</string>
+    <string name="alert_title">⚡ TARGET DETECTED</string>
+    <string name="app_name">BlueMeanie</string>
+    <string name="app_tagline">BLE Device Detector</string>
+    <string name="bluetooth_required">Enable Bluetooth to scan</string>
+    <string name="channel_description">Alerts when target devices are detected</string>
+    <string name="channel_name">Scanner Alerts</string>
+    <string name="devices_found">Devices: %1$d</string>
+    <string name="devices_found_plural">%1$d devices</string>
+    <string name="permission_required">Permissions required</string>
+    <string name="ready_status">Ready</string>
+    <string name="scanning_status">Scanning</string>
+    <string name="service_scanning">Scanning for devices…</string>
+    <string name="service_title">JackScanner Active</string>
+    <string name="settings">SETTINGS</string>
+    <string name="start_scan">START SCAN</string>
+    <string name="status_label">STATUS</string>
+    <string name="stop">STOP</string>
+    <string name="stop_scan">STOP</string>
+    <string name="target_oui">Target OUI: 00:25:DF</string>
+    <string name="unknown_device">Unknown Device</string>
+    <style name="Theme.JackScanner" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/accent_primary</item>
+        <item name="colorPrimaryDark">@color/background_primary</item>
+        <item name="colorAccent">@color/accent_primary</item>
+        <item name="android:statusBarColor">@color/background_primary</item>
+        <item name="android:navigationBarColor">@color/background_primary</item>
+        <item name="android:windowBackground">@color/background_primary</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

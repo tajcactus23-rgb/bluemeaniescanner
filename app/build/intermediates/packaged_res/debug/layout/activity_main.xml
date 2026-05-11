@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BLE Scanner"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Idle"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnScan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="START SCAN"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:id="@+id/tvDetections"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Detections will appear here"
+        android:textSize="14sp"/>
+
+</LinearLayout>

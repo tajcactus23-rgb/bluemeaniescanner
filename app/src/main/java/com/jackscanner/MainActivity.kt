@@ -1,7 +1,6 @@
 package com.jackscanner
 
 import android.Manifest
-import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothManager
 import android.content.Context
 import android.content.Intent
@@ -10,10 +9,10 @@ import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.jackscanner.service.BleScanService
 
 class MainActivity : AppCompatActivity() {
     
@@ -22,9 +21,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var tvDetections: TextView
     
     private var isScanning = false
-    private val BluetoothAdapter? by lazy {
-        (getSystemService(Context.BLUETOOTH_SERVICE) as BluetoothManager).adapter
-    }
     
     companion object {
         const val PERMISSION_REQUEST_CODE = 1001
@@ -81,15 +77,11 @@ class MainActivity : AppCompatActivity() {
     private fun toggleScan() {
         isScanning = !isScanning
         
-        if (isScanning) {
-            val intent = Intent(this, BleScanService::class.java)
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                startForegroundService(intent)
-            } else {
-                startService(intent)
-            }
+        val intent = Intent(this, BleScanService::class.java)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(intent)
         } else {
-            stopService(Intent(this, BleScanService::class.java))
+            startService(intent)
         }
         
         updateUI()

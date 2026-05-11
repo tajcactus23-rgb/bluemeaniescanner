@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "com.jackscanner.app-merged_res-37:/mipmap-mdpi_ic_launcher_round.xml.flat",
+        "source": "com.jackscanner.app-main-39:/mipmap-mdpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.jackscanner.app-merged_res-37:/mipmap-xhdpi_ic_launcher.xml.flat",
+        "source": "com.jackscanner.app-main-39:/mipmap-xhdpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.jackscanner.app-merged_res-37:/mipmap-mdpi_ic_launcher.xml.flat",
+        "source": "com.jackscanner.app-main-39:/mipmap-mdpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.jackscanner.app-merged_res-37:/mipmap-xxhdpi_ic_launcher_round.xml.flat",
+        "source": "com.jackscanner.app-main-39:/mipmap-xxhdpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.jackscanner.app-merged_res-37:/mipmap-xhdpi_ic_launcher_round.xml.flat",
+        "source": "com.jackscanner.app-main-39:/mipmap-xhdpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.jackscanner.app-merged_res-37:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.jackscanner.app-main-39:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.jackscanner.app-merged_res-37:/mipmap-hdpi_ic_launcher_round.xml.flat",
+        "source": "com.jackscanner.app-main-39:/mipmap-hdpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.jackscanner.app-merged_res-37:/drawable_radar_ring.xml.flat",
+        "source": "com.jackscanner.app-main-39:/drawable/radar_ring.xml"
+    },
+    {
+        "merged": "com.jackscanner.app-merged_res-37:/mipmap-xxxhdpi_ic_launcher_round.xml.flat",
+        "source": "com.jackscanner.app-main-39:/mipmap-xxxhdpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.jackscanner.app-merged_res-37:/mipmap-xxxhdpi_ic_launcher.xml.flat",
+        "source": "com.jackscanner.app-main-39:/mipmap-xxxhdpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.jackscanner.app-merged_res-37:/drawable_radar_ring_middle.xml.flat",
+        "source": "com.jackscanner.app-main-39:/drawable/radar_ring_middle.xml"
+    },
+    {
+        "merged": "com.jackscanner.app-merged_res-37:/drawable_ic_stop.xml.flat",
+        "source": "com.jackscanner.app-main-39:/drawable/ic_stop.xml"
+    },
+    {
+        "merged": "com.jackscanner.app-merged_res-37:/drawable_btn_scan.xml.flat",
+        "source": "com.jackscanner.app-main-39:/drawable/btn_scan.xml"
+    },
+    {
+        "merged": "com.jackscanner.app-merged_res-37:/drawable_ic_alert.xml.flat",
+        "source": "com.jackscanner.app-main-39:/drawable/ic_alert.xml"
+    },
+    {
+        "merged": "com.jackscanner.app-merged_res-37:/drawable_radar_ring_inner.xml.flat",
+        "source": "com.jackscanner.app-main-39:/drawable/radar_ring_inner.xml"
+    },
+    {
+        "merged": "com.jackscanner.app-merged_res-37:/drawable_ic_scan.xml.flat",
+        "source": "com.jackscanner.app-main-39:/drawable/ic_scan.xml"
+    },
+    {
+        "merged": "com.jackscanner.app-merged_res-37:/drawable_radar_line.xml.flat",
+        "source": "com.jackscanner.app-main-39:/drawable/radar_line.xml"
+    },
+    {
+        "merged": "com.jackscanner.app-merged_res-37:/drawable_ic_ble.xml.flat",
+        "source": "com.jackscanner.app-main-39:/drawable/ic_ble.xml"
+    },
+    {
+        "merged": "com.jackscanner.app-merged_res-37:/mipmap-hdpi_ic_launcher.xml.flat",
+        "source": "com.jackscanner.app-main-39:/mipmap-hdpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.jackscanner.app-merged_res-37:/drawable_radar_dot.xml.flat",
+        "source": "com.jackscanner.app-main-39:/drawable/radar_dot.xml"
+    },
+    {
+        "merged": "com.jackscanner.app-merged_res-37:/mipmap-xxhdpi_ic_launcher.xml.flat",
+        "source": "com.jackscanner.app-main-39:/mipmap-xxhdpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.jackscanner.app-merged_res-37:/layout_activity_main.xml.flat",
+        "source": "com.jackscanner.app-main-39:/layout/activity_main.xml"
+    }
+]

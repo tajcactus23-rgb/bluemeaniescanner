@@ -17,7 +17,7 @@ import android.os.Vibrator
 import android.os.VibratorManager
 import androidx.core.app.NotificationCompat
 import com.jackscanner.R
-import com.jackscanner.ui.MainActivity
+import com.jackscanner.MainActivity
 import com.jackscanner.utils.OuiMapper
 
 class BleScanService : Service() {
