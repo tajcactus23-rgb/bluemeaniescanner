@@ -18,7 +18,10 @@ jobs:
       - name: Build
         run: |
           chmod +x gradlew
-          ./gradlew assembleDebug --no-daemon --info 2>&1 | tail -60
+          ls -la
+          ls -la app/
+          ls -la app/build/ 2>/dev/null || echo "No build dir yet"
+          ./gradlew assembleDebug --no-daemon --info 2>&1 | tail -100
       - name: Upload
         uses: actions/upload-artifact@v4
         if: success()
