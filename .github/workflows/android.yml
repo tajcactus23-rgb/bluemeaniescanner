@@ -17,15 +17,17 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+          cache: 'gradle'
+      
+      - name: Grant execute permission
+        run: chmod +x jackscanner/gradlew
       
       - name: Build with Gradle
-        uses: gradle/gradle-build-action@v2
-        with:
-          arguments: assembleDebug
-          build-root-directory: jackscanner
+        run: cd jackscanner && ./gradlew assembleDebug --no-daemon
       
       - name: Upload APK
         uses: actions/upload-artifact@v4
+        if: success()
         with:
           name: app-debug
           path: jackscanner/app/build/outputs/apk/debug/app-debug.apk
