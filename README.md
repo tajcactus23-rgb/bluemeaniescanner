@@ -1,257 +1,230 @@
-# JackScanner 🛡️
+# BLE Guardian 🛡️
 
 <p align="center">
-  <a href="https://github.com/follow">
-    <img src="https://img.shields.io/github/stars/jackscanner?style=flat&label=★&color=yellow" alt="Stars">
-  </a>
-  <a href="https://github.com/jackscanner/jackscanner/issues">
-    <img src="https://img.shields.io/github/issues/jackscanner/jackscanner?color=red" alt="Issues">
-  </a>
-  <a href="https://opensource.org/licenses/MIT">
-    <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License">
-  </a>
-  <img src="https://img.shields.io/badge/Python-3.x-blue.svg" alt="Python">
+  <img src="https://img.shields.io/badge/Version-2.0.0-blue.svg" alt="Version">
+  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License">
   <img src="https://img.shields.io/badge/Android-12%2B-green.svg" alt="Android">
-</p>
-
-<p align="center">
-  <b>JackScanner</b> is a BLE (Bluetooth Low Energy) scanner designed to detect nearby Axon body cameras, tasers, and other police equipment. Originally inspired by research from DEF CON 31 talks.
+  <img src="https://img.shields.io/badge/Platform-Flutter-02569B.svg" alt="Flutter">
 </p>
 
 ---
 
-## ⚠️ Legal Notice
+# ⚠️ LEGAL DISCLAIMER - READ FIRST BEFORE USE
 
-> **This tool is for educational and research purposes only.**
-> 
-> Use only where scanning is legal. Check local laws before use.
-> 
-> This project is **not affiliated with** Axon Enterprise, Inc.
+## 🚨 IMPORTANT: AUTHORIZED USE ONLY
+
+**By downloading, installing, or using this software, you agree to the following terms:**
+
+---
+
+### 1. PURPOSE & AUTHORIZATION
+
+This software is designed **exclusively** for:
+
+- ✅ Personal security and privacy protection
+- ✅ Device allowlist management (YOUR devices)
+- ✅ Authorized BLE device identification
+- ✅ Research and educational purposes
+- ✅ Finding YOUR OWN lost devices
+
+**🚫 You must have LAWFUL AUTHORIZATION before using this scanner.**
+
+---
+
+### 2. PROHIBITED USES
+
+**DO NOT use this software for:**
+
+- ❌ Unauthorized tracking of others
+- ❌ BLE spoofing or impersonation
+- ❌ Packet injection or signal jamming
+- ❌ Exploiting vulnerabilities
+- ❌ Bypassing security controls
+- ❌ Stalking or harassment
+- ❌ Surveillance without consent
+- ❌ Industrial espionage
+- ❌ Any illegal activity
+
+**This software does NOT include any offensive or exploit capabilities.**
+
+---
+
+### 3. LEGAL COMPLIANCE
+
+**You are solely responsible for:**
+
+- ✅ Ensuring your use is legal in your jurisdiction
+- ✅ Obtaining proper authorization before scanning
+- ✅ Complying with all applicable laws
+- ✅ Understanding local regulations (GDPR, CCPA,Wireless 802.15.4, etc.)
+- ✅ Getting necessary permissions from device owners
+
+**⚠️ Laws vary by jurisdiction. What is legal in one place may be illegal elsewhere.**
+
+---
+
+### 4. NO WARRANTY
+
+**THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND.**
+
+The authors and contributors disclaim all warranties, express or implied, INCLUDING BUT NOT LIMITED TO:
+
+- Fitness for a particular purpose
+- Non-infringement
+- Accuracy or reliability
+- Results obtained
+- Error-free operation
+
+---
+
+### 5. LIMITATION OF LIABILITY
+
+**By using this software, you agree that:**
+
+The developers, contributors, publishers, and assignees **SHALL NOT** be liable for:
+
+- Any damages whatsoever arising from use
+- Illegal activities you perform
+- Actions of third parties
+- Loss of data or privacy
+- Any indirect, incidental, special, or consequential damages
+
+**You agree to indemnify and hold harmless all parties.**
+
+---
+
+### 6. AT YOUR OWN RISK
+
+**You acknowledge that:**
+
+- ⚠️ Use is entirely at your own risk
+- ⚠️ You accept full responsibility  
+- ⚠️ You will indemnify developers against claims
+- ⚠️ You assume all legal liability
+
+---
+
+### 7. PRIVACY & DATA
+
+- ✅ This app does NOT collect, transmit, or share your data
+- ✅ All processing is LOCAL to your device
+- ✅ No analytics or tracking
+- ✅ You control your allowlist data
+- ✅ No cloud connectivity required
+
+---
+
+### 8. THIRD-PARTY SERVICES
+
+This software may use:
+
+- Android system Bluetooth APIs
+- Standard notification services  
+- Device location (optional - for map feature only)
+
+We are not responsible for third-party service practices.
+
+---
+
+### 9. ACCEPTANCE
+
+**By installing or using this app, you:**
+
+1. ✅ Acknowledge you have read this disclaimer
+2. ✅ Accept these terms unconditionally  
+3. ✅ Agree to use only in lawful ways
+4. ✅ Accept sole responsibility for your actions
+
+**If you do not agree, DO NOT install or use this software.**
+
+---
+
+# BLE Guardian
+
+<p align="center">
+  <b>Professional BLE Scanner with Cyberpunk UI</b>
+</p>
 
 ---
 
 ## 📱 Overview
 
-JackScanner Detects:
+A professional-grade BLE (Bluetooth Low Energy) scanner with:
 
-| Device Type | OUI | Notes |
-|-------------|-----|-------|
-| Axon Body Cameras | 00:25:DF | Officer worn |
-| Axon Taser | 00:25:DF | Weapons |
-| Axon Flex | 00:25:DF | Vehicle mounted |
-
-```
-┌─────────────────────────────────────┐
-│  JackScanner                        │
-├─────────────────────────────────────┤
-│  ┌─────────────────┐  ┌──────────┐  │
-│  │ BLE Scanner    │──│ Detects │  │
-│  │ (hcitool/bleak)│  │ 00:25:DF│  │
-│  └─────────────────┘  └──────────┘  │
-│                                    │
-│  ┌─────────────────┐  ┌──────────┐  │
-│  │ Alert System   │──│ Notify  │  │
-│  │ (vibrate/sound)│  │ +Log    │  │
-│  └─────────────────┘  └──────────┘  │
-└─────────────────────────────────────┘
-```
+- 🔋 **Battery-efficient** background scanning
+- 🎨 **Cyberpunk UI** with Signal Core animation
+- 📡 **Multiple scan modes** (Low Power / Balanced / High Alert)
+- 🔔 **Custom alerts** with vibration patterns
+- 📋 **Allowlist management**
+- 📊 **Detection logging**
+- 🗺️ **Location-aware** (optional)
 
 ---
 
-## 🚀 Features
+## Features
 
-### Core
-- **Continuous Scanning** - Real-time BLE device detection
-- **OUI Filtering** - Targets only Axon devices (00:25:DF)
-- **Dual Mode** - Works with or without root
-- **Logging** - Records all detections with timestamps
-
-### Alert Options
-- **Sound** - Audio notification on detection
-- **Vibrate** - Haptic feedback (Termux)
-- **Push Notification** - System notification (Termux)
-
-### Platforms
-- **Python** - Termux/Android (root or non-root)
-- **Kotlin** - Native Android app source
+| Feature | Description |
+|---------|-------------|
+| Background Scanner | Foreground service with persistent notification |
+| Scan Modes | Low Power (5s), Balanced (2s), High Alert (500ms) |
+| Alert System | 10 vibration patterns, 8 sound profiles |
+| Detection | RSSI smoothing, distance estimation |
+| Allowlist | Add your own device identifiers |
+| Theme | Dynamic theme engine |
+| Export | JSON/CSV detection logs |
 
 ---
 
-## 💻 Installation
+## 🔧 Technical Details
 
-### Termux (Android - Recommended)
-
-```bash
-# Install dependencies
-pkg update && pkg upgrade -y
-pkg install -y python git bluez-utils
-
-# Clone repo
-git clone https://github.com/jackscanner/jackscanner.git
-cd jackscanner
-
-# Install Python dependencies
-pip install bleak
-
-# Run (non-root mode)
-python jackscanner.py
-```
-
-### Root Mode (hcitool)
-
-```bash
-# If you have root, use hcitool for better scanning
-# Enable in Magisk - Grant root to Termux
-
-# Run scanner
-python jackscanner.py
-```
+- **Platform:** Android 12+
+- **Architecture:** MVVM with Compose
+- **Scanner:** Android BLE API
+- **Permissions:** BLUETOOTH_SCAN, BLUETOOTH_CONNECT, ACCESS_FINE_LOCATION
 
 ---
 
-## 📱 Android App (APK)
+## 📋 Quick Reference
 
-Pre-built APK coming soon. Build from source:
+| Requirement | Your Responsibility |
+|-------------|-------------------|
+| Authorization | Obtain before use |
+| Legality | Verify in your jurisdiction |
+| Permissions | Request from users/devices |
+| Compliance | Follow all applicable laws |
+| Liability | **You bear all responsibility** |
+
+---
+
+## 🆘 Questions & Support
+
+1. **Legal Questions?** Consult a qualified legal professional in your jurisdiction
+2. **Technical Issues?** Open a GitHub issue
+3. **Feature Requests?** Open a GitHub issue
+
+---
+
+## 📄 License
+
+MIT License - See LICENSE file
+
+---
+
+## 👥 Authors
+
+- **bluemeanie23** - Lead Developer
+
+---
+
+## ⚡ Build
 
 ```bash
-cd android
 ./gradlew assembleDebug
 ```
 
-APK Location: `app/build/outputs/apk/debug/app-debug.apk`
-
 ---
 
-## 🔧 Usage
+**© 2026 BLE Guardian**  
+**Version 2.0.0**
 
-```
-$ python jackscanner.py
-
-══════════════════════════════════════════
- JackScanner - BLE Device Scanner
- Target OUI: 00:25:DF (Axon)
-══════════════════════════════════════════
-
-[*] Using hcitool (root mode)
-[14:32:05] Scanning... (3 devices)
-[14:32:07] Scanning... (5 devices)
-[!] TARGET DETECTED!
-    Address: 00:25:DF:A1:B2:C3
-    Name: AXON Flex 2
-    RSSI: -72 dBm
-    Time: 2024-05-10 14:32:10
-```
-
-### Output Files
-
-- `detections.log` - All detection events
-- Console output - Real-time status
-
----
-
-## 🔍 How It Works
-
-### Detection Flow
-
-```
-1. Scan for BLE devices
-   ↓
-2. Extract MAC address
-   ↓
-3. Get first 8 chars (OUI)
-   ↓
-4. Match against target:
-   - 00:25:DF (Axon)
-   - 00:25:df (lowercase)
-   ↓
-5. If match → ALERT!
-```
-
-### Signal Range
-
-| RSSI (dBm) | Approx Distance |
-|------------|----------------|
-| -50 to -60 | Very close (< 3m) |
-| -60 to -70 | Close (3-10m) |
-| -70 to -80 | Medium (10-20m) |
-| -80 to -90 | Far (> 20m) |
-
----
-
-## 📂 Project Structure
-
-```
-jackscanner/
-├── jackscanner.py      # Main scanner (Python)
-├── axonbleeder.py     # Direct mode variant
-├── termux_setup.sh   # Install script
-├── README.md          # This file
-├── LICENSE            # MIT License
-├── android/           # Android app source
-│   ├── app/
-│   │   ├── build.gradle
-│   │   └── src/main/
-│   │       ├── AndroidManifest.xml
-│   │       ├── java/com/jackscanner/
-│   │       └── res/
-│   └── build.gradle
-└── docs/
-    └── SCANNING.md   # Detailed docs
-```
-
----
-
-## 🔐 Permissions
-
-### Android (Required)
-- `BLUETOOTH_SCAN`
-- `BLUETOOTH_CONNECT`  
-- `ACCESS_FINE_LOCATION`
-- `POST_NOTIFICATIONS`
-
-### Termux (Optional)
-- Bluetooth access
-- Vibration
-
----
-
-## ⚠️ Limitations
-
-- **Android Stock** - BLE scanning may not work on stock Android without root
-- **Range** - Limited to Bluetooth range (~10-30m typical)
-- **Detection** - Only detects advertising devices
-- **Random MAC** - Some devices use random MAC addresses (Android 10+)
-
----
-
-## 📜 License
-
-MIT License - See [LICENSE](LICENSE)
-
----
-
-## 🙏 Acknowledgments
-
-- Inspired by [lookout.py](https://github.com/judcrandall/lookout.py)
-- Inspired by [PoliceDetector](https://github.com/omtoi101/PoliceDetector)
-- DEF CON 31 talks by Null Agent and Sally
-
----
-
-## ⚡ Quick Start
-
-```bash
-# One-liner for Termux
-curl -sL https://git.io/jackscan | bash
-
-# Or clone directly
-git clone https://github.com/jackscanner/jackscanner.git
-cd jackscanner
-python jackscanner.py
-```
-
----
-
-<p align="center">
-  <sub>For educational and research purposes only.</sub>
-</p>
+*Legal Disclaimer v2.0 - Updated 2026*
