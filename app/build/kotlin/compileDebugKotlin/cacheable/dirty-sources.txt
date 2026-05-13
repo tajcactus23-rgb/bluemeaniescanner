@@ -1,0 +1,11 @@
+/workspace/bluemeaniescanner/app/src/main/java/com/bleguard/scanner/service/BLEScannerService.kt
+/workspace/bluemeaniescanner/app/src/main/java/com/bleguard/scanner/ui/components/SignalCore.kt
+/workspace/bluemeaniescanner/app/src/main/java/com/bleguard/scanner/utils/AllowlistManager.kt
+/workspace/bluemeaniescanner/app/src/main/java/com/bleguard/scanner/receiver/BootReceiver.kt
+/workspace/bluemeaniescanner/app/src/main/java/com/bleguard/scanner/model/Models.kt
+/workspace/bluemeaniescanner/app/src/main/java/com/bleguard/scanner/ui/MainScreen.kt
+/workspace/bluemeaniescanner/app/src/main/java/com/bleguard/scanner/utils/PreferencesManager.kt
+/workspace/bluemeaniescanner/app/src/main/java/com/bleguard/scanner/ui/MainActivity.kt
+/workspace/bluemeaniescanner/app/src/main/java/com/bleguard/scanner/data/Database.kt
+/workspace/bluemeaniescanner/app/src/main/java/com/bleguard/scanner/utils/BLEUtils.kt
+/workspace/bluemeaniescanner/app/src/main/java/com/bleguard/scanner/BLEGuardApplication.kt

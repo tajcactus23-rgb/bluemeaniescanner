@@ -4,7 +4,7 @@
     "type": "COMPATIBLE_SCREEN_MANIFEST",
     "kind": "Directory"
   },
-  "applicationId": "com.jackscanner",
+  "applicationId": "com.bleguard.scanner",
   "variantName": "debug",
   "elements": []
 }

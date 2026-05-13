@@ -1,42 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jackscanner"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    package="com.bleguard.scanner"
+    android:versionCode="2"
+    android:versionName="2.0.0" >
 
     <uses-sdk
-        android:minSdkVersion="31"
+        android:minSdkVersion="26"
         android:targetSdkVersion="34" />
 
-    <!-- Bluetooth permissions -->
+    <!-- BLE Permissions -->
     <uses-permission
         android:name="android.permission.BLUETOOTH"
         android:maxSdkVersion="30" />
     <uses-permission
         android:name="android.permission.BLUETOOTH_ADMIN"
         android:maxSdkVersion="30" />
-    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-
-    <!-- Location permissions (required for BLE on Android 9 and below) -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
-    <!-- Foreground service permissions -->
+    <!-- Foreground Service -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
-    <!-- Vibration for alerts -->
+    <!-- Alerts -->
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
-    <!-- Wake lock for continuous scanning -->
+    <!-- Storage -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="31" />
+
+    <!-- Network -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Wake Lock -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-
-    <!-- Boot completed -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
-    <!-- Hardware features -->
+    <!-- Hardware -->
     <uses-feature
         android:name="android.hardware.bluetooth_le"
         android:required="true" />
@@ -45,13 +58,14 @@
         android:required="false" />
 
     <permission
-        android:name="com.jackscanner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="com.bleguard.scanner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.jackscanner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <uses-permission android:name="com.bleguard.scanner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
-        android:allowBackup="false"
+        android:name="com.bleguard.scanner.BLEGuardApplication"
+        android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:extractNativeLibs="false"
@@ -59,12 +73,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.JackScanner" >
+        android:theme="@style/Theme.BLEGuard" >
         <activity
-            android:name="com.jackscanner.MainActivity"
+            android:name="com.bleguard.scanner.ui.MainActivity"
             android:exported="true"
-            android:launchMode="singleTop"
-            android:theme="@style/Theme.JackScanner" >
+            android:theme="@style/Theme.BLEGuard" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -72,16 +85,16 @@
             </intent-filter>
         </activity>
 
-        <!-- BLE Scanning Foreground Service -->
+        <!-- BLE Scanner Foreground Service -->
         <service
-            android:name="com.jackscanner.service.BleScanService"
+            android:name="com.bleguard.scanner.service.BLEScannerService"
             android:enabled="true"
             android:exported="false"
-            android:foregroundServiceType="connectedDevice" />
+            android:foregroundServiceType="location" />
 
-        <!-- Boot receiver to restart scanning on device boot -->
+        <!-- Boot Receiver -->
         <receiver
-            android:name="com.jackscanner.receiver.BootReceiver"
+            android:name="com.bleguard.scanner.receiver.BootReceiver"
             android:enabled="true"
             android:exported="false" >
             <intent-filter>
@@ -89,9 +102,25 @@
             </intent-filter>
         </receiver>
 
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="androidx.compose.ui.tooling.PreviewActivity"
+            android:exported="true" />
+        <activity
+            android:name="androidx.activity.ComponentActivity"
+            android:exported="true" />
+
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.jackscanner.androidx-startup"
+            android:authorities="com.bleguard.scanner.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"
@@ -103,6 +132,11 @@
                 android:name="androidx.profileinstaller.ProfileInstallerInitializer"
                 android:value="androidx.startup" />
         </provider>
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
 
         <receiver
             android:name="androidx.profileinstaller.ProfileInstallReceiver"
